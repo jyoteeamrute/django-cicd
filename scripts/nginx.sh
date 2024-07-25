@@ -11,4 +11,7 @@ sudo ln -s /etc/nginx/sites-available/django-cicd /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo gpasswd -a www-data ubuntu
 sudo systemctl restart nginx
+sudo systemctl reload nginx
 
+sudo systemctl status nginx
+sudo tail -f /var/log/nginx/error.log
