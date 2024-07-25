@@ -13,5 +13,9 @@ sudo systemctl daemon-reload
 
 sudo systemctl restart gunicorn.service
 sudo journalctl -u gunicorn
+sudo chown www-data:www-data /run/gunicorn.sock
+sudo chmod 660 /run/gunicorn.sock
+
+
 sudo ls -l /run/gunicorn.sock
 
