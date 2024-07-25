@@ -6,6 +6,12 @@ sudo systemctl start gunicorn.service
 sudo systemctl enable gunicorn.service
 sudo systemctl status gunicorn
 
+sudo systemctl start gunicorn.socket
+sudo systemctl enable gunicorn.socket
+sudo systemctl status gunicorn.socket
+sudo systemctl daemon-reload
+
+sudo systemctl restart gunicorn.service
 sudo journalctl -u gunicorn
 sudo ls -l /run/gunicorn.sock
 
