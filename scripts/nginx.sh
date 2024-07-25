@@ -14,8 +14,5 @@ sudo systemctl restart nginx
 sudo systemctl reload nginx
 sudo ls -l /run/gunicorn.sock
 
-sudo ufw delete allow 8000
-sudo ufw allow 'Nginx Full'
-
 sudo systemctl status nginx
-sudo tail -f /var/log/nginx/error.log
+# sudo tail -f /var/log/nginx/error.log
