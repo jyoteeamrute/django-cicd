@@ -15,7 +15,8 @@ sudo systemctl restart gunicorn.service
 sudo journalctl -u gunicorn
 sudo chown www-data:www-data /run/gunicorn.sock
 sudo chmod 660 /run/gunicorn.sock
-
+# /home/ubuntu/django-cicd/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock classmanager.wsgi:application
+sudo journalctl -u gunicorn.service -e
 
 sudo ls -l /run/gunicorn.sock
 

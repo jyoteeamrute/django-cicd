@@ -1,5 +1,6 @@
+                                                 
 [Unit]
-Description=gunicorn daemon
+Description=gunicorn daemon for django-cicd
 Requires=gunicorn.socket
 After=network.target
 
@@ -9,7 +10,8 @@ Group=www-data
 WorkingDirectory=/home/ubuntu/django-cicd
 ExecStart=/home/ubuntu/django-cicd/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock classmanager.wsgi:application
 
-       
 [Install]
 WantedBy=multi-user.target
+
+
 
