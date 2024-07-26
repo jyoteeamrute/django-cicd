@@ -14,4 +14,4 @@ pillow
 setuptools
 whitenoise
 django_createsuperuser
-distutils
+
