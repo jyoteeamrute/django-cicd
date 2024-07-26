@@ -1,4 +1,4 @@
-                                                 
+
 [Unit]
 Description=gunicorn daemon for django-cicd
 Requires=gunicorn.socket
@@ -12,6 +12,7 @@ ExecStart=/home/ubuntu/django-cicd/env/bin/gunicorn --access-logfile - --workers
 
 [Install]
 WantedBy=multi-user.target
+
 
 
 
