@@ -1,20 +1,12 @@
-#!/usr/bin/env bash
+
+
+# Update package list
 sudo apt-get update
-sudo apt-get install python3-venv python3-pip
 
-sudo rm /var/lib/dpkg/lock-frontend
-sudo rm /var/lib/dpkg/lock
-sudo rm /var/cache/apt/archives/lock
-sudo dpkg --configure -a
-
-sudo apt-get update
-sudo apt-get install python3-full
-sudo apt-get install pipx
-
-sudo apt install -y python3-pip
-sudo apt install -y nginx
-sudo apt install -y virtualenv
-pip install setuptools
-pip install whitenoise
-# pip install distutils
-#!/usr/bin/env bash
+# Install required packages
+sudo apt-get install -y python3-venv python3-pip nginx
+# Optional: Install additional packages
+# pip install distutils  # Only if needed and available in the virtual environment
+# Display installed packages and Python version for verification
+pip list
+python --version
