@@ -17,7 +17,6 @@ sudo nginx -t
 sudo gpasswd -a www-data ubuntu
 sudo systemctl restart nginx
 # sudo systemctl reload nginx
-sudo ls -l /run/gunicorn.sock
 
 sudo systemctl status nginx
 # sudo tail -f /var/log/nginx/error.log
